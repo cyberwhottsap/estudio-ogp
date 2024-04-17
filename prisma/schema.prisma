@@ -1,0 +1,41 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+/// This model or at least one of its fields has comments in the database, and requires an additional setup for migrations: Read more: https://pris.ly/d/database-comments
+model itszapopan {
+  id                                Int     @id @default(autoincrement()) @db.SmallInt
+  nombre_proyecto                   String?
+  metodologia_empleada              Float?
+  descripcion_de_la_invencion       Float?
+  beneficios_del_proyecto           Float?
+  impacto_de_la_solucion            Float?
+  organizacion_tematica_            Float?
+  desenvolvimiento                  Float?
+  funcionamiento_del_prototipo      Float?
+  grado_de_desarrollo_del_prototipo Float?
+  fecha                             String? @db.VarChar(255)
+}
+
+model encuesta {
+  id             BigInt  @id(map: "Encuesta_pkey") @default(autoincrement())
+  numero_control BigInt?
+  pregunta0      String? @db.VarChar(255)
+  pregunta1      String? @db.VarChar(255)
+  pregunta2      String? @db.VarChar(255)
+  pregunta3      String? @db.VarChar(255)
+  pregunta4      String? @db.VarChar(255)
+  pregunta5      String? @db.VarChar(255)
+  pregunta6      String? @db.VarChar(255)
+  pregunta7      String? @db.VarChar(255)
+  pregunta8      String? @db.VarChar(255)
+  pregunta9      String? @db.VarChar(255)
+  pregunta10     String? @db.VarChar(255)
+  pregunta11     String? @db.VarChar(255)
+  tipo_encuesta  String? @db.VarChar(255)
+}
