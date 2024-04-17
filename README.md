@@ -12,7 +12,7 @@ La estructura del proyecto es:
 ## 1. Gráficas
 Origen: "pages/resultados.tsx"
 
-## 2. Cálculos de la sección de resultados
+## 2. Cálculos de la sección de Resultados
 
 Lo relacionado a las fases se cuentra en "server/api/routers/project.ts" en el método "getAll"
 
